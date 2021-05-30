@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title>what is this</title>
+    <head>
+        <title>안녕하세요</title>
         <link rel="stylesheet" href="index.css">
-    </header>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    </head>
     <body>
-        <h1 id="title">안녕!!</h1><br>
-        <input type="button" value="실행" onclick="rgb_swicth()" id="swicth">
+        <h1 id="title"></h1><br>
+        <input type="button" value="실행" id="swicth" onclick="rgb_swicth()"><br>
+        <h3>투명도 조절</h3>
+        <input type="range" id="bgcolor_a" min="10" max="100" oninput="a_range()">
+        
+        
         <script src="index.js" charset="UTF-8"></script>
     </body>
 </html>

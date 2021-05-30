@@ -1,9 +1,13 @@
 
-rgb_btn = document.querySelector("#swicth");
+rgb_btn = document.querySelector("#swicth"); 
+a__range = document.querySelector("#bgcolor_a");
+
+console.log(a__range.value)
 
 var r = 255;
 var g = 0;
 var b = 0;
+var a = 0.55;
 const value = 5;
 
 var rgb_bool = false
@@ -11,8 +15,8 @@ var rgb_bool = false
 function rgbChange(){
     if (rgb_bool == true){
         console.log(`${r},${g},${b}`);
-        title.style.color = `rgb(${r},${g},${b}`;
-
+        document.body.style.backgroundColor = `rgba(${r},${g},${b},${a})`;
+        
         if (r == 255 && g < 255 && b == 0){
             g += value;
         }
@@ -39,6 +43,7 @@ function rgbChange(){
 
 function rgb_swicth(){
     rgb_bool = !rgb_bool;
+    rgbChange();
     if (rgb_bool == true){
         rgb_btn.value = "종료";
     }else{
@@ -46,4 +51,7 @@ function rgb_swicth(){
     }
 }
 
-window.addEventListener("click",rgbChange);
+function a_range(){
+    console.log(a__range.value/100);
+    a = a__range.value/100
+}
