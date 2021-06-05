@@ -1,6 +1,7 @@
 
 rgb_btn = document.querySelector("#swicth"); 
 a__range = document.querySelector("#bgcolor_a");
+speed__range = document.querySelector("#rgb_speed");
 
 console.log(a__range.value)
 
@@ -8,13 +9,14 @@ var r = 255;
 var g = 0;
 var b = 0;
 var a = 0.55;
-const value = 5;
+const value = 1;
+var speed = 10.5584541;
 
 var rgb_bool = false
 
 function rgbChange(){
     if (rgb_bool == true){
-        console.log(`${r},${g},${b}`);
+        //console.log(`${r},${g},${b}`);
         document.body.style.backgroundColor = `rgba(${r},${g},${b},${a})`;
         
         if (r == 255 && g < 255 && b == 0){
@@ -37,7 +39,7 @@ function rgbChange(){
         }
         setTimeout(function(){
             rgbChange();
-        },50);
+        },speed);
     }
 }
 
@@ -52,6 +54,15 @@ function rgb_swicth(){
 }
 
 function a_range(){
+    a = a__range.value/100;
+    if (rgb_bool==false){
+        document.body.style.backgroundColor = `rgba(${r},${g},${b},${a})`;
+    }
     console.log(a__range.value/100);
-    a = a__range.value/100
+    
+}
+
+function speed_range(){
+    speed = 24 - speed__range.value;
+    console.log(speed);
 }

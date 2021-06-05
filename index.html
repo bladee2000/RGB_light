@@ -5,11 +5,17 @@
         <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     </head>
-    <body>
+    <body ondragstart="return false" onselectstart="return false">
         <h1 id="title"></h1><br>
+        
         <input type="button" value="실행" id="swicth" onclick="rgb_swicth()"><br>
+        
         <h3>투명도 조절</h3>
         <input type="range" id="bgcolor_a" min="10" max="100" oninput="a_range()">
+
+        <h3>빠르기 조절</h3>
+        <input type="range" id="rgb_speed" min="4" max="20" oninput="speed_range()">
+
         
         
         <script src="index.js" charset="UTF-8"></script>
