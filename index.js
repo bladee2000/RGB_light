@@ -2,7 +2,7 @@
 rgb_btn = document.querySelector("#swicth"); 
 a__range = document.querySelector("#bgcolor_a");
 speed__range = document.querySelector("#rgb_speed");
-
+background = document.querySelector(".bg")
 console.log(a__range.value)
 
 var r = 255;
@@ -11,6 +11,7 @@ var b = 0;
 var a = 0.55;
 const value = 1;
 var speed = 10.5584541;
+var setting_bool = false;
 
 var rgb_bool = false
 
@@ -65,4 +66,15 @@ function a_range(){
 function speed_range(){
     speed = 24 - speed__range.value;
     console.log(speed);
+}
+
+function setting_addClass(){
+    if (setting_bool == false){
+        document.querySelector(".setting").className += " open";
+        setting_bool = !setting_bool;
+    }else{
+        document.querySelector(".setting").className = "setting";
+        setting_bool = !setting_bool
+    }
+    
 }

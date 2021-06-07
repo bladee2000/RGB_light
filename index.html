@@ -2,22 +2,21 @@
 <html>
     <head>
         <title>안녕하세요</title>
-        <link rel="stylesheet" href="index2.css">
+        <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     </head>
     <body ondragstart="return false" onselectstart="return false">
-        <h1 id="title"></h1><br>
-        
-        <input type="button" value="실행" id="swicth" onclick="rgb_swicth()"><br>
-        
-        <h3>투명도 조절</h3>
-        <input type="range" id="bgcolor_a" min="10" max="100" oninput="a_range()">
+        <input type="button" value="실행" id="swicth" onclick="rgb_swicth()">
+        <input type="button" value="설정" onclick="setting_addClass()"><br>
+        <div class="setting">
+            <h3>투명도 조절</h3>
+            <input type="range" id="bgcolor_a" min="10" max="100" oninput="a_range()">
 
-        <h3>빠르기 조절</h3>
-        <input type="range" id="rgb_speed" min="4" max="20" oninput="speed_range()">
-
+            <h3>빠르기 조절</h3>
+            <input type="range" id="rgb_speed" min="4" max="20" oninput="speed_range()">
+        </div>
         
         
-        <script src="index2.js" charset="UTF-8"></script>
+        <script src="index.js" charset="UTF-8"></script>
     </body>
 </html>
