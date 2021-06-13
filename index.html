@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>안녕하세요</title>
+        <title>RGB 무드등</title>
+        <link href="icon.ico" rel="shortcut icon" type="image/x-icon">
         <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
         <script data-ad-client="ca-pub-5989244067690298" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     </head>
     <body ondragstart="return false" onselectstart="return false">
         <input type="button" value="실행" id="swicth" onclick="rgb_swicth()">
         <input type="button" value="설정" onclick="setting_addClass()"><br>
         <div class="setting">
-            <h3>투명도 조절</h3>
-            <input type="range" id="bgcolor_a" min="10" max="100" oninput="a_range()">
+            <div class="bar">
+                <h3>투명도 조절</h3>
+                <input type="range" id="bgcolor_a" min="10" max="100" oninput="a_range()">
+            </div>
+            
+            <div class="bar">
+                <h3>빠르기 조절</h3>
+                <input type="range" id="rgb_speed" min="4" max="20" oninput="speed_range()">
+            </div>
+            
 
-            <h3>빠르기 조절</h3>
-            <input type="range" id="rgb_speed" min="4" max="20" oninput="speed_range()">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- 기본 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5989244067690298"
+                data-ad-slot="7859944348"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <div>
+                <br>
+            </div>
         </div>
         
         
